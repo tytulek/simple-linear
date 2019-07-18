@@ -11,6 +11,9 @@ N<-nrow(dane) #sample size
 avgx<- sum(x)/N
 avgy<- sum(y)/N
 
+sdx<-sd(x)
+sdy<-sd(y)
+
 wariancja_x<-sum((x-avgx)^2)/(N-1)
 
 kowariancja_xy<-sum((x-avgx)*(y-avgy))/(N-1)
@@ -44,6 +47,9 @@ cat ("
     b1: ", b1c, "std. error b1: ", stex, "t-value: ", tvalue_b1, "p-value: ", pvalue_b1, "
     R-squared: ", rsq, "
     Mean Sq: ", wariancja_resi, "RSE: ", sqrt(wariancja_resi))
+
+plot(cars)
+lines(x, y_hat, col="blue")
 }
 
 simple_linear(cars$speed,cars$dist,cars)
