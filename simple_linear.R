@@ -11,8 +11,8 @@ N<-nrow(dane) #sample size
 avgx<- sum(x)/N
 avgy<- sum(y)/N
 
-sdx<-sd(x)
-sdy<-sd(y)
+sdx<-sqrt(sum((x-avgx)^2)/(N-1))
+sdy<-sqrt(sum((y-avgy)^2)/(N-1))
 
 wariancja_x<-sum((x-avgx)^2)/(N-1)
 
